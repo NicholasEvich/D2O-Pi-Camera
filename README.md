@@ -14,4 +14,4 @@
 
 **npm install** (this should create a "node_modules" folder in the same directory, if it does not, something went wrong)
 
-Run **npm start** or **node index** to start the camera. It may be worth editing bash.sh to have the server start on boot
+Run **npm start** or **node index** to start the camera. It may be worth editing .bashrc to have the server start on boot
