@@ -1,9 +1,23 @@
+<!doctype html> 
 <html>
-    <body>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+</head>
+    <header>
+        <div class="display-4 text-center" style="background-color: white">RSEC D2O Tank and Reactor Core Livestream</div>
+    </header>
+    <body background="Core.jpg" style="background-size: 1920px 1080px ; background-repeat: no-repeat">
+	<br>
+	<div class="container">
+            <div class="jumbotron text-center" id="video">
+	    </div>
+	</div>
+
         <script type="text/javascript" src="https://rawgit.com/131/h264-live-player/master/vendor/dist/http-live-player.js"></script>
         <script>
             var canvas = document.createElement("canvas");
-            document.body.appendChild(canvas);
+            document.querySelector("#video").appendChild(canvas);
 
             var wsavc = new WSAvcPlayer(canvas, "webgl");
 
@@ -12,3 +26,4 @@
         </script>
     </body>
 </html>
+
