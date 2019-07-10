@@ -14,6 +14,10 @@ const wss = require('express-ws')(app);
 
 app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'));
 
+app.get('/Core.jpg', (req, res) => res.sendFile(__dirname + '/Core.jpg'));
+
+app.use(express.static("Core.jpg"));
+
 app.ws('/video-stream', (ws, req) => {
     const videoStream = raspividStream({timeout: 0, width:960, height:540 ,preview:'1,1,1,1',roi:'0.5,0.5,0.5,0.5'});
 
@@ -31,7 +35,6 @@ app.ws('/video-stream', (ws, req) => {
 
     ws.on('close', () => {
         console.log('Client left');
-        //updateLeds();
         videoStream.removeAllListeners('data');
     });
 });
@@ -46,3 +49,5 @@ app.listen(3000, () => {
 	 exec('chromium-browser http://localhost:3000');
 	 setTimeout(() => exec('killall chromium-browser'), 30000);
 });
+
+
