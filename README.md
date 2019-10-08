@@ -1,6 +1,6 @@
 # D2O-Pi-Camera
 
-Installation Instructions:
+Installation Instructions (Raspberry Pi/Linux):
 
 **sudo apt-get update**
 
