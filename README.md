@@ -1,5 +1,7 @@
 # D2O-Pi-Camera
 
+Installation Instructions:
+
 **sudo apt-get update**
 
 **sudo apt-get dist-upgrade**
